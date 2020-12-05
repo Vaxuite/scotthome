@@ -1,0 +1,14 @@
+mat-icon {
+  &.success { color: #24c100 }
+  &.info { color: #0086ff }
+  &.warn { color: #ffc700 }
+  &.error { color: #ff2200 }
+}
+
+.notification-container {
+  display: grid;
+  grid-template-areas:
+    "icon      message";
+  grid-column-gap: 10px;
+  grid-template-columns: 25px auto;
+}

@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <button
+    (click)="drawer.toggle()"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    type="button">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="dash-title">Scott Home</div>
+  <div class="stripes"></div>
+</mat-toolbar>
+
+
+<mat-drawer-container class="sidenav-container">
+  <mat-drawer #drawer
+              [mode]="'push'"
+              [opened]="false"
+              class="sidenav"
+              fixedInViewport>
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a (click)="drawer.close()"
+         mat-list-item
+         routerLink="/home">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>

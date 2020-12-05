@@ -1,0 +1,18 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.cards{
+  display: flex;
+}
+
+.card {
+  width:200px;
+  height:100px;
+  display: block;
+}
+
+.card-title {
+  text-align: center;
+}
+

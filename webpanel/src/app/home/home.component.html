@@ -1,0 +1,11 @@
+
+<div class="cards">
+  <div *ngFor="let room of lightRooms; index as i; first as isFirst">
+    <app-card cardTitle="{{room.name}}">
+      <app-lightroomcard [lightRoom]="room"></app-lightroomcard>
+    </app-card>
+
+  </div>
+
+</div>
+

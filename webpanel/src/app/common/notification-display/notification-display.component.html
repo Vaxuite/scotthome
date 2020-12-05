@@ -1,0 +1,8 @@
+<div class="notification-container">
+  <mat-icon *ngIf="data.type === 'SUCCESS'" class="success">check_circle</mat-icon>
+  <mat-icon *ngIf="data.type === 'INFO'" class="info">info</mat-icon>
+  <mat-icon *ngIf="data.type === 'WARN'" class="warn">report_problem</mat-icon>
+  <mat-icon *ngIf="data.type === 'ERROR'" class="error">highlight_off</mat-icon>
+
+  <span>{{data.message}}</span>
+</div>

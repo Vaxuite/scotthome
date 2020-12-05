@@ -1,0 +1,14 @@
+<div class="lightroomcard">
+  <button mat-raised-button color="primary" (click)="this.setState(true)">On</button>
+  <button mat-raised-button color="warn" (click)="this.setState(false)">Off</button>
+
+  <mat-slider #lightslider min="0" max="255" step="5" value="{{this.lightRoom.roomState.brightness}}"
+              (change)="this.setBrightness(lightslider.value)"></mat-slider>
+
+  <mat-select placeholder="Choose a scene">
+    <mat-option *ngFor="let scene of this.lightRoom.scenes; index as i; first as isFirst" (onSelectionChange)="this.setScene(scene.name)">
+      {{scene.name}}
+    </mat-option>
+  </mat-select>
+</div>
+
